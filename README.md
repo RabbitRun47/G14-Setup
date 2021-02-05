@@ -66,7 +66,7 @@ In order to set a fan curve, you must have exactly 8 pairs, and also must not sp
 
 Example `"fan_curve": "30c:0%,40c:0%,50c:20%,60c:20%,70c:40%,80c:60%,90c:80%,100c:80%"`
 ### last resort
-If you get any issues on running `sudo asusd` search in the [Discord server](https://discord.gg/ngbdKabAnP) or google
+If you get any issues on running `sudo asusd`, search in the [Discord server](https://discord.gg/ngbdKabAnP) or google
 ## Gnome Tweak Tool
 ```
 sudo apt install gnome-tweaks
