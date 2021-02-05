@@ -1,5 +1,5 @@
 # G14-Setup
-## [Keys](https://www.reddit.com/r/ZephyrusG14/comments/k69zjm/linux_new_daily_driver/gek0v8t?utm_source=share&utm_medium=web2x&context=3)
+## [Keys](https://www.reddit.com/r/ZephyrusG14/comments/k69zjm/linux_new_daily_driver/gek0v8t)
 Add below lines to `/etc/udev/hwdb.d/90-g14-mod.hwdb` to enable respective key functions
 ```
 evdev:input:b0003v0B05p1866*
