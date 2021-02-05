@@ -65,8 +65,10 @@ systemctl disable system76-power.service
 In order to set a fan curve, you must have exactly 8 pairs, and also must not specify a temperature lower than 30c, and not higher than 109c. Each pair has the temperature and fan speed separated by a colon, and each pair is separated by commas.
 
 Example `"fan_curve": "30c:0%,40c:0%,50c:20%,60c:20%,70c:40%,80c:60%,90c:80%,100c:80%"`
-### last resort
-If you get any issues on running `sudo asusd`, search in the [Discord server](https://discord.gg/ngbdKabAnP) or google
+### Issues
+If you get issues on running `sudo asusd`, try installing the dkms modules from [asus-rog-nb-wmi](https://gitlab.com/asus-linux/asus-rog-nb-wmi) and [hid-asus-rog](https://gitlab.com/asus-linux/hid-asus-rog) and restart the service using `systemctl daemon-reload && systemctl restart asusd`
+#### Last resort
+If you still get issues on running `sudo asusd`, search in the [Discord server](https://discord.gg/ngbdKabAnP) or google
 ## Gnome Tweak Tool
 ```
 sudo apt install gnome-tweaks
