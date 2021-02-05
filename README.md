@@ -33,7 +33,7 @@ sudo cp /boot/grub/x86_64-efi/grub.efi /boot/efi/EFI/pop/grubx64.efi
 grub-customizer
 ```
 File -> Change Environment -> OUTPUT_FILE: `/boot/efi/EFI/pop/grub.cfg` -> ☑️ save this configuration -> Apply -> close -> Update & Quit
-## Install kernel 5.10.0
+### Install kernel 5.10.0
 ```
 wget https://raw.githubusercontent.com/pimlie/ubuntu-mainline-kernel.sh/master/ubuntu-mainline-kernel.sh
 chmod +x ubuntu-mainline-kernel.sh
