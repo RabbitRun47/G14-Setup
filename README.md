@@ -74,3 +74,7 @@ If you still get issues on running `sudo asusd`, search in the [Discord server](
 sudo apt install gnome-tweaks
 ```
 Place your gnome extensions in `~/.local/share/gnome-shell/extensions` under same folder name as the `uid` in `metadata.json` of the extension
+### Recommended Extensions
+You can see the gnome shell version in the Tweaks app
+- [Power Indicator](https://extensions.gnome.org/extension/1501/power-indicator/)
+- [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
