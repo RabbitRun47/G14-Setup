@@ -16,7 +16,7 @@ sudo systemd-hwdb update
 sudo udevadm trigger
 ```
 Edit `/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common`
-Add following just above `[Element PCM]` to enable mute button and better volume control
+Add following just above `[Element PCM]` section to enable mute button and better volume control
 ```
 [Element Master]
 switch = mute
@@ -32,7 +32,7 @@ sudo grub-install
 sudo cp /boot/grub/x86_64-efi/grub.efi /boot/efi/EFI/pop/grubx64.efi
 grub-customizer
 ```
-File -> Change Environment -> OUTPUT_FILE: `/boot/efi/EFI/pop/grub.cfg` -> select save this configuration -> Apply -> close -> Update & Quit
+File -> Change Environment -> OUTPUT_FILE: `/boot/efi/EFI/pop/grub.cfg` -> ☑️ save this configuration -> Apply -> close -> Update & Quit
 ## Install kernel 5.10.0
 ```
 wget https://raw.githubusercontent.com/pimlie/ubuntu-mainline-kernel.sh/master/ubuntu-mainline-kernel.sh
