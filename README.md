@@ -60,8 +60,8 @@ Disable system76-power gnome extension and service if you want to manage graphic
 ```
 systemctl disable system76-power.service
 ```
-### Control battery charge limit, cpu turbo, gpu profile and fan curves
-These packages let you control battery charge limit, cpu turbo, gpu profile and fan curves. After completion of this setup you can simply use `asusctl` command in the terminal to set all these values, or you can use the config file I have uploaded in this repo. The contents of the config file need to go here `/etc/asusd/asusd.conf`
+### Controlling battery charge limit, cpu turbo, gpu profile and fan curves
+Use `asusctl` command in the terminal to configure these values, or you can use the config file I have uploaded in this repo. The contents of the config file need to go here `/etc/asusd/asusd.conf`
 #### asusctl
 Use the command `asusctl -h` to get help on the command. To get help on a specific option use `asusctl <option> -h`. Making changes here writes the values to the config file mentioned above.
 ##### Fan Curve
