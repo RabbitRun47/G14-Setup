@@ -68,7 +68,7 @@ In order to set a fan curve, you must have exactly 8 pairs, and also must not sp
 ### Issues
 Run `sudo asusd` in terminal. This tells you about the status of the config you have set using `asusctl`.
 If you get errors, try installing the dkms modules from [asus-rog-nb-wmi](https://gitlab.com/asus-linux/asus-rog-nb-wmi) and [hid-asus-rog](https://gitlab.com/asus-linux/hid-asus-rog) and restart the service using `systemctl daemon-reload && systemctl restart asusd`
-#### Last resort
+### Last resort
 If you still get issues on running `sudo asusd`, search in the [Discord server](https://discord.gg/ngbdKabAnP) or google
 ## Gnome Tweak Tool
 ```
