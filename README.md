@@ -60,11 +60,14 @@ Disable system76-power gnome extension and service if you want to manage graphic
 ```
 systemctl disable system76-power.service
 ```
-### /etc/asusd/asusd.conf
-#### Fan Curve
+### Control battery charge limit, cpu turbo, gpu profile and fan curves
+These packages let you use control battery charge limit, cpu turbo, gpu profile and fan curves. After completion of this setup you can simply use `asusctl` command in the terminal to set all these values, or you can use the config file I have uploaded in this repo. This contents of the config file need to go here `/etc/asusd/asusd.conf`
+#### asusctl
+Use the command `asusctl -h` to get help on various options of the command. To get help on a specific option use `asusctl <option> -h`
+##### Fan Curve
 In order to set a fan curve, you must have exactly 8 pairs, and also must not specify a temperature lower than 30c, and not higher than 109c. Each pair has the temperature and fan speed separated by a colon, and each pair is separated by commas.
 
-Example `"fan_curve": "30c:0%,40c:0%,50c:20%,60c:20%,70c:40%,80c:60%,90c:80%,100c:80%"`
+Example `"30c:0%,40c:0%,50c:20%,60c:20%,70c:40%,80c:60%,90c:80%,100c:80%"`
 ### Issues
 If you get issues on running `sudo asusd`, try installing the dkms modules from [asus-rog-nb-wmi](https://gitlab.com/asus-linux/asus-rog-nb-wmi) and [hid-asus-rog](https://gitlab.com/asus-linux/hid-asus-rog) and restart the service using `systemctl daemon-reload && systemctl restart asusd`
 #### Last resort
