@@ -50,6 +50,8 @@ sudo apt-get install dkms-hid-asus-rog dkms-asus-rog-nb-wmi asus-nb-ctrl
 sudo apt install acpi-call-dkms
 sudo modprobe acpi_call
 systemctl daemon-reload && systemctl restart asusd
+systemctl --user enable asus-notify.service
+systemctl --user start asus-notify.service
 ```
 Add following lines to `/etc/modules-load.d/acpi_call.conf`
 ```
@@ -63,6 +65,8 @@ systemctl disable system76-power.service
 ### asusctl
 Use `asusctl` command in the terminal to configure battery charge limit, cpu turbo, gpu profile and fan curves. Use the command `asusctl -h` to get help on the command. To get help on a specific option use `asusctl <option> -h`. Making changes here writes the values to the config file `/etc/asusd/asusd.conf`.
 You can also use the config file I have uploaded in this repo.
+
+Bind the `Fn+F5` key to `asusctl profile -n` in the custom keyboard shortcuts section in Pop OS settings.
 #### Fan Curve
 In order to set a fan curve, you must have exactly 8 pairs, and also must not specify a temperature lower than 30c, and not higher than 109c. Each pair has the temperature and fan speed separated by a colon, and each pair is separated by commas. Example `"30c:0%,40c:0%,50c:20%,60c:20%,70c:40%,80c:60%,90c:80%,100c:80%"`
 ### Issues
