@@ -31,7 +31,9 @@ sudo apt update
 sudo apt install -y mainline
 ```
 Go to "All Software" by pressing `super + A`, you will see the "Ubuntu Mainline Kernel Installer".
+
 Install 5.10.0 from the list
+
 Restart
 ## Asus dkms packages - Controlling battery charge limit, cpu turbo, gpu profile and fan curves
 ```
@@ -54,6 +56,7 @@ Add following lines to `/etc/modules-load.d/asus.conf`
 hid_asus
 ```
 Restart
+
 Disable system76-power gnome extension and service if you want to manage graphics using the dkms packages. (Recommended)
 ```
 systemctl disable system76-power.service
