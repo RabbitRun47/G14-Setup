@@ -24,22 +24,14 @@ volume = ignore
 ```
 ## Time
 `timedatectl set-local-rtc 1 --adjust-system-clock`
-## [Update to kernel 5.10.0](https://www.reddit.com/r/ZephyrusG14/comments/kpgori/pop_os_and_g14_r7_rtx_help_is_needed/ghy4f3d)
-### [grub setup](https://www.youtube.com/watch?v=wLOZfT0732Y)
+## [Update to kernel 5.10.0](https://pop-planet.info/forums/threads/kernels-installing-and-removing.758/)
 ```
-sudo apt install grub-efi grub2-common grub-customizer
-sudo grub-install
-sudo cp /boot/grub/x86_64-efi/grub.efi /boot/efi/EFI/pop/grubx64.efi
-grub-customizer
+sudo add-apt-repository -y ppa:cappelikan/ppa
+sudo apt update
+sudo apt install -y mainline
 ```
-File -> Change Environment -> OUTPUT_FILE: `/boot/efi/EFI/pop/grub.cfg` -> ☑️ save this configuration -> Apply -> close -> Update & Quit
-### Install kernel 5.10.0
-```
-wget https://raw.githubusercontent.com/pimlie/ubuntu-mainline-kernel.sh/master/ubuntu-mainline-kernel.sh
-chmod +x ubuntu-mainline-kernel.sh
-sudo mv ubuntu-mainline-kernel.sh /usr/local/bin/
-sudo ubuntu-mainline-kernel.sh -i 5.10.0
-```
+Go to "All Software" by pressing `super + A`, you will see the "Ubuntu Mainline Kernel Installer".
+Install 5.10.0 from the list
 Restart
 ## Asus dkms packages - Controlling battery charge limit, cpu turbo, gpu profile and fan curves
 ```
@@ -55,9 +47,13 @@ systemctl --user start asus-notify.service
 ```
 Add following lines to `/etc/modules-load.d/acpi_call.conf`
 ```
-# For asusd fan curve profile needs :
 acpi_call
 ```
+Add following lines to `/etc/modules-load.d/asus.conf`
+```
+hid_asus
+```
+Restart
 Disable system76-power gnome extension and service if you want to manage graphics using the dkms packages. (Recommended)
 ```
 systemctl disable system76-power.service
