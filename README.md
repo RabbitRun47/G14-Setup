@@ -57,7 +57,7 @@ hid_asus
 ```
 Restart
 
-Disable system76-power gnome extension and service if you want to manage graphics using the dkms packages. (Recommended)
+Disable system76-power GNOME extension and service if you want to manage graphics using the dkms packages. (Recommended)
 ```
 systemctl disable system76-power.service
 ```
@@ -71,15 +71,15 @@ In order to set a fan curve, you must have exactly 8 pairs, and also must not sp
 ### Issues
 Run `sudo asusd` in terminal. This tells you about the status of the config you have set using `asusctl`.
 If you see errors, I would recommend searching in the [Discord server](https://discord.gg/ngbdKabAnP) or google the error.
-## Gnome Tweak Tool
+## GNOME Tweak Tool
 ```
 sudo apt install gnome-tweaks
 ```
-Place your gnome extensions in `~/.local/share/gnome-shell/extensions` under same folder name as the `uid` in `metadata.json` of the extension.
+Place your GNOME extensions in `~/.local/share/gnome-shell/extensions` under same folder name as the `uid` in `metadata.json` of the extension.
 
-Restart GNOME Shell by press `Alt + F2` and type `r` and hit `Enter`
+Restart GNOME Shell by pressing `Alt + F2` and type `r` and hit `Enter`
 ### Recommended Extensions
 - [Power Indicator](https://extensions.gnome.org/extension/1501/power-indicator/)
 - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
 
-You can see the gnome shell version in the Tweaks app
+You can see the GNOME shell version in the Tweaks app
