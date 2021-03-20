@@ -75,7 +75,9 @@ If you see errors, I would recommend searching in the [Discord server](https://d
 ```
 sudo apt install gnome-tweaks
 ```
-Place your gnome extensions in `~/.local/share/gnome-shell/extensions` under same folder name as the `uid` in `metadata.json` of the extension
+Place your gnome extensions in `~/.local/share/gnome-shell/extensions` under same folder name as the `uid` in `metadata.json` of the extension.
+
+Restart GNOME Shell by press `Alt + F2` and type `r` and hit `Enter`
 ### Recommended Extensions
 - [Power Indicator](https://extensions.gnome.org/extension/1501/power-indicator/)
 - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
